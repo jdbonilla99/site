@@ -19,14 +19,14 @@
 
         .about-me {
             background-image: url('Jonathan.jpeg'); /* Path to the image */
-            background-size: 150%; /* Zoom out by increasing size */
+            background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             color: black;
             position: relative;
-            min-height: 130vh; /* Increase the height to prevent content from being cut off */
+            min-height: 130vh; /* Prevent content from being cut off */
         }
 
         .about-me::before {
@@ -36,7 +36,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Darken background more */
+            background-color: rgba(0, 0, 0, 0.7); /* Darken background */
             z-index: 1;
         }
 
@@ -44,10 +44,10 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 30px 30px 60px; /* Increase bottom padding */
-            background-color: rgba(255, 255, 255, 0.9); /* White box background */
+            padding: 30px 30px 60px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background */
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -61,17 +61,17 @@
             color: #003366;
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
-            display: inline-block; /* Ensures underline is only under the text */
+            display: inline-block; /* Underline the text */
         }
 
         p {
             font-size: 1.2rem;
             color: black;
-            margin-bottom: 40px; /* Add extra space below the description */
+            margin-bottom: 40px;
         }
 
         .lists {
-            margin-top: 50px; /* Increase space above the lists */
+            margin-top: 50px;
         }
 
         .list-container {
@@ -91,12 +91,11 @@
             margin: 10px;
             padding: 10px;
             border-radius: 5px;
-            width: 30%;
+            width: 30%; /* Set percentage width */
             text-align: center;
             transition: transform 0.3s ease;
             color: #FFFFFF;
-            font-size: 1.3rem; /* Increase the font size */
-
+            font-size: 1.3rem;
         }
 
         ul li:hover {
@@ -138,6 +137,95 @@
 
         .logo:hover {
             transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .about-content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            ul li {
+                width: 45%; /* Adjust width for medium screens */
+                font-size: 1.2rem;
+            }
+
+            .home-link .button {
+                font-size: 1.3rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-me {
+                background-size: 120%; /* Zoom out the background */
+            }
+
+            .about-content {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            ul li {
+                width: 100%; /* Full width for small screens */
+                font-size: 1.1rem;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 10px;
+            }
+
+            .logo {
+                width: 90px; /* Smaller logo on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-me {
+                background-size: 110%;
+            }
+
+            .about-content {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            ul li {
+                width: 100%; /* Full width for mobile */
+                font-size: 1rem;
+            }
+
+            .home-link .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px; /* Smaller logo */
+            }
         }
     </style>
 </head>
