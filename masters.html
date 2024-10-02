@@ -70,7 +70,7 @@
             color: #FFFFFF;
             margin: 15px 0;
             padding-left: 5%; /* Apply padding for uniform left and right margins */
-            padding-right: 5%;
+            padding-right: 5%; /* Consistent margins on both sides */
             word-wrap: break-word; /* Ensure words wrap on smaller screens */
         }
 
@@ -259,6 +259,13 @@
             .image-grid {
                 grid-template-columns: 1fr; /* One image per row for mobile */
             }
+
+            /* Apply uniform margin for mobile screens */
+            .research,
+            p, li, ul {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
         }
     </style>
 </head>
@@ -327,6 +334,5 @@
 
 </body>
 </html>
-
 
 
