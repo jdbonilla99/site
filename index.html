@@ -8,63 +8,56 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Ensure full height */
-        }
-
-        body {
-            background-image: url('newbg.jpeg'); 
+            height: 100%;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('newbg.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: black; /* Set all text to black */
+            color: black;
             position: relative;
-            min-height: 100vh;
-            padding: 50px; /* Add 50px padding */
-            box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
+            padding: 50px;
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 4rem; /* Large title */
-            color: #FFFFFF; /* Title color */
-            margin-top: 150px; /* Lowered the header */
+            font-size: 5vw; /* Dynamic font size for better scaling */
+            color: #FFFFFF;
+            margin-top: 15vh; /* Adjusted margin to prevent logo overlap */
             position: relative;
             z-index: 1;
-            animation: slideInFromTop 1.5s ease-out forwards; /* Apply slide-in animation */
-            opacity: 0; /* Start as invisible */
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Added shadow to the text */
-            line-height: 1.2; /* Increased line spacing for better readability */
+            animation: slideInFromTop 1.5s ease-out forwards;
+            opacity: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         nav a {
             text-decoration: none;
-            color: #FFFFFF; /* Navigation links color */
-            margin: 20px;
-            font-size: 1.5rem;
-            position: relative;
-            z-index: 1;
+            color: #FFFFFF;
+            margin: 10px;
+            font-size: 1.5vw; /* Dynamic font size for links */
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 0.5s; /* Delay to sync with the h1 animation */
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Added shadow to navigation links */
+            animation-delay: 0.5s;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
         }
 
         nav {
-            margin-top: 80px; /* Lowered the navigation */
-            opacity: 0; /* Initially invisible */
-            animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation */
-            animation-delay: 0.5s; /* Delay for a smooth transition */
+            margin-top: 10vh;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+            animation-delay: 0.5s;
         }
 
         .logo {
             position: absolute;
-            bottom: 20px; /* Initial position */
+            bottom: 5vh; /* Adjusted to ensure the logo is not too close to the bottom */
             left: 50%;
             transform: translateX(-50%);
-            width: 280px; /* Logo size */
-            opacity: 0; /* Start invisible */
-            animation: emergeFromBottom 2s ease-out forwards; /* Animate logo moving up */
+            width: 15vw; /* Logo size using viewport width */
+            opacity: 0;
+            animation: emergeFromBottom 2s ease-out forwards;
             z-index: 1;
         }
 
@@ -97,84 +90,85 @@
                 opacity: 0;
             }
             100% {
-                bottom: 105px;
+                bottom: 10vh;
                 opacity: 0.9;
             }
         }
 
         /* Responsive design for different screen sizes */
         @media (max-width: 1024px) {
-            body {
-                padding: 30px;
-            }
-
             h1 {
-                font-size: 3.5rem; /* Slightly larger on tablets */
-                margin-top: 120px;
-                line-height: 1.3; /* Increased line spacing */
+                font-size: 4vw; /* Slightly reduced size for tablets */
+                margin-top: 20vh;
             }
 
             nav a {
-                font-size: 1.3rem; /* Slightly smaller font for navigation links */
-                margin: 15px;
+                font-size: 1.3vw;
+                margin: 8px;
             }
 
             .logo {
-                width: 240px; /* Adjust logo size for medium screens */
+                width: 18vw; /* Adjust logo size for medium screens */
+                bottom: 7vh;
             }
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-
             h1 {
-                font-size: 3rem; /* Larger font size for tablets and small laptops */
-                margin-top: 90px;
-                line-height: 1.3; /* Adjust line spacing */
+                font-size: 6vw;
+                margin-top: 25vh;
             }
 
             nav a {
-                font-size: 1.2rem; /* Adjusted font for navigation links */
+                font-size: 3vw;
                 margin: 10px;
             }
 
             .logo {
-                width: 200px; /* Smaller logo for tablets */
+                width: 22vw;
+                bottom: 5vh;
             }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 10px;
+                padding: 20px;
             }
 
             h1 {
-                font-size: 2.5rem; /* Increased font size for better visibility on phones */
-                margin-top: 50px; /* Adjusted margin */
-                line-height: 1.4; /* Increased line spacing for better readability */
+                font-size: 7vw;
+                margin-top: 15vh;
             }
 
             nav a {
-                font-size: 1.2rem; /* Increased font size for mobile devices */
-                margin: 8px;
-            }
-
-            nav {
-                margin-top: 30px; /* Add some space between rows of links */
-            }
-
-            nav a {
-                display: block; /* Ensure each link is on a separate line */
-                margin-bottom: 15px; /* Add space between rows of links */
+                font-size: 4vw;
+                margin: 10px;
+                display: block; /* Ensure links are on separate lines on small screens */
             }
 
             .logo {
-                width: 160px; /* Adjusted logo size for phones */
-                bottom: 50px; /* Raised logo for better placement */
+                width: 25vw;
+                bottom: 5vh;
             }
         }
+
+        /* For high zoom/resolution cases */
+        @media (min-width: 2560px) and (max-height: 1440px) {
+            h1 {
+                font-size: 3vw;
+                margin-top: 18vh;
+            }
+
+            nav a {
+                font-size: 1.2vw;
+            }
+
+            .logo {
+                width: 12vw; /* Reduce logo size for larger screens */
+                bottom: 12vh;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -193,4 +187,5 @@
 
 </body>
 </html>
+
 
