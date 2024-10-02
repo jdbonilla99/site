@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
             background-color: #000;
@@ -57,7 +57,7 @@
             display: block;
             margin: 10px 0;
             color: white;
-            font-size: 3rem; /* Increased icon size */
+            font-size: 3rem;
             transition: color 0.3s ease;
         }
 
@@ -75,17 +75,17 @@
             right: 20px;
             color: white;
             font-weight: bold;
-            font-size: 1.5rem; /* Increased resume button size */
+            font-size: 1.5rem;
         }
 
         .resume a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s ease; /* Adding transition for smooth effect */
+            transition: color 0.3s ease;
         }
 
         .resume a:hover {
-            color: green; /* Changing color to green on hover */
+            color: green;
         }
 
         .back-home {
@@ -93,40 +93,134 @@
         }
 
         .back-home .button {
-            color: yellow; /* Changed color to yellow */
+            color: yellow;
             text-decoration: none;
-            font-size: 1.5rem; /* Increased font size */
+            font-size: 1.5rem;
             background-color: transparent;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
+            margin: 0 10px;
             transition: all 0.3s ease;
         }
 
         .back-home .button:hover {
-            color: #fff200; /* Brighter yellow on hover */
+            color: #fff200;
         }
 
         /* Logo styling */
         .logo {
-            width: 112.5px; /* Half the original 225px */
+            width: 112.5px;
             position: absolute;
             bottom: 100px;
             left: 50%;
             transform: translateX(-50%) translateY(200px); /* Start below the screen */
-            opacity: 0; /* Initially invisible */
-            animation: slideUp 2s ease forwards; /* Animation applied */
+            opacity: 0;
+            animation: slideUp 2s ease forwards;
         }
 
         /* Keyframes for sliding the logo up */
         @keyframes slideUp {
             0% {
-                transform: translateX(-50%) translateY(200px); /* Start below */
-                opacity: 0; /* Invisible at the start */
+                transform: translateX(-50%) translateY(200px);
+                opacity: 0;
             }
             100% {
-                transform: translateX(-50%) translateY(0); /* End at the original position */
-                opacity: 1; /* Fully visible at the end */
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .social-icons a {
+                font-size: 2.5rem; /* Reduce icon size for tablets */
+            }
+
+            .resume {
+                font-size: 1.3rem; /* Reduce resume button size */
+            }
+
+            .back-home .button {
+                font-size: 1.3rem;
+                padding: 8px 15px;
+            }
+
+            .logo {
+                width: 90px; /* Reduce logo size for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            form {
+                width: 250px; /* Narrower form for smaller screens */
+            }
+
+            .social-icons {
+                right: 10px; /* Bring icons closer to the center */
+            }
+
+            .social-icons a {
+                font-size: 2rem; /* Further reduce icon size for smaller screens */
+            }
+
+            .resume {
+                font-size: 1.2rem; /* Further reduce resume button size */
+            }
+
+            .back-home .button {
+                font-size: 1.2rem;
+                padding: 7px 10px;
+            }
+
+            .logo {
+                width: 80px; /* Further reduce logo size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            input, textarea {
+                padding: 8px; /* Smaller padding for mobile */
+            }
+
+            .social-icons {
+                right: 5px; /* Bring icons even closer */
+            }
+
+            .social-icons a {
+                font-size: 1.5rem; /* Smaller icons on mobile */
+            }
+
+            .resume {
+                font-size: 1rem;
+            }
+
+            .back-home .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px; /* Smallest logo for mobile */
             }
         }
     </style>
@@ -163,4 +257,5 @@
 
 </body>
 </html>
+
 
