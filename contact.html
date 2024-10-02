@@ -20,6 +20,7 @@
             font-size: 2.5rem; /* Adjusted for better responsiveness */
             color: white;
             margin-bottom: 20px;
+            margin-top: 50px; /* Adjusted to create space for the resume button */
         }
 
         p {
@@ -82,7 +83,7 @@
 
         .resume {
             position: absolute;
-            top: 70px; /* Increased space from the header */
+            top: 20px; /* Placed resume button higher, above the header */
             right: 20px;
             color: white;
             font-weight: bold;
@@ -175,7 +176,7 @@
 
             .resume {
                 font-size: 1.2rem;
-                top: 60px; /* Adjusted for more space on mobile */
+                top: 20px; /* Ensure there's space above the contact me header */
             }
 
             .back-home .button {
@@ -217,7 +218,7 @@
 
             .resume {
                 font-size: 1rem;
-                top: 60px; /* More space from the header */
+                top: 15px; /* More space from the header */
                 right: 10px;
             }
 
@@ -235,6 +236,10 @@
 </head>
 <body>
 
+    <div class="resume">
+        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Resume</a>
+    </div>
+
     <h2>Contact Me</h2>
     <p>If you would like to contact me, please use the form below</p>
 
@@ -244,10 +249,6 @@
         <textarea name="message" placeholder="Message" rows="5" required></textarea>
         <input type="submit" value="Send">
     </form>
-
-    <div class="resume">
-        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Resume</a>
-    </div>
 
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/jdbonilla" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
@@ -263,5 +264,4 @@
 
 </body>
 </html>
-
 
