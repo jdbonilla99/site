@@ -17,8 +17,9 @@
             color: #000;
             font-family: 'Montserrat', sans-serif;
             margin: 40px;
-            padding-bottom: 100px; /* Add padding at the bottom */
+            padding-bottom: 100px;
         }
+
         h2 {
             font-family: 'Lora', serif;
             font-size: 2.5rem;
@@ -27,12 +28,14 @@
             padding-bottom: 10px;
             text-align: center;
         }
+
         .education, .courses {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 50px 0;
         }
+
         .education-item, .courses-item {
             max-width: 700px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -42,9 +45,11 @@
             margin-bottom: 40px;
             transition: transform 0.3s ease;
         }
+
         .education-item:hover, .courses-item:hover {
             transform: translateY(-10px);
         }
+
         a, button {
             background-color: #003366;
             color: #FFD700;
@@ -53,26 +58,21 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         a:hover, button:hover {
             background-color: #FFD700;
             color: #003366;
         }
 
-        /* Reduce the gap between the last education item and the logo */
-        .education {
-            margin-bottom: 10px; /* Reduce the bottom margin to move logo closer */
-        }
-
-        /* Remove any unnecessary margin above the logo */
         .logo {
             width: 112.5px;
-            margin: -60px auto 10px auto; /* Move logo up even more by using a larger negative margin */
+            margin: -60px auto 10px auto;
             display: block;
             background-color: transparent;
         }
 
         .home-link {
-            margin-top: 20px; /* Moved the home button higher */
+            margin-top: 20px;
             text-align: center;
             padding-bottom: 50px;
         }
@@ -84,7 +84,7 @@
             background-color: #003366;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
+            margin: 0 10px;
             transition: all 0.3s ease;
         }
 
@@ -93,11 +93,76 @@
             color: #003366;
         }
 
-        /* Increase size of list items under courses */
         .courses-item ul {
-            font-size: 1.1rem; /* Increase the font size */
-            line-height: 1.3;  /* Add some spacing between the list items */
-            padding-left: 20px; /* Optional: add some padding to the left of the list */
+            font-size: 1.1rem;
+            line-height: 1.3;
+            padding-left: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .education-item, .courses-item {
+                max-width: 600px;
+                padding: 20px;
+            }
+
+            .home-link .button {
+                font-size: 1.3rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+                padding-bottom: 60px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .education-item, .courses-item {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 10px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .education-item, .courses-item {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .courses-item ul {
+                font-size: 1rem;
+            }
+
+            .home-link .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px;
+            }
         }
     </style>
 </head>
@@ -162,3 +227,4 @@
 
 </body>
 </html>
+
