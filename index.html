@@ -21,12 +21,12 @@
             color: black; /* Set all text to black */
             position: relative;
             min-height: 100vh;
-            padding: 50px; /* Add 50px margin around the body */
+            padding: 50px; /* Add 50px padding */
             box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
         }
 
         h1 {
-            font-size: 4rem; /* Increased the size of the title */
+            font-size: 4rem; /* Large title */
             color: #FFFFFF; /* Title color */
             margin-top: 150px; /* Lowered the header */
             position: relative;
@@ -34,18 +34,6 @@
             animation: slideInFromTop 1.5s ease-out forwards; /* Apply slide-in animation */
             opacity: 0; /* Start as invisible */
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Added shadow to the text */
-        }
-
-        /* Animation for the heading text */
-        @keyframes slideInFromTop {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
         }
 
         nav a {
@@ -68,6 +56,29 @@
             animation-delay: 0.5s; /* Delay for a smooth transition */
         }
 
+        .logo {
+            position: absolute;
+            bottom: 20px; /* Initial position */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px; /* Logo size */
+            opacity: 0; /* Start invisible */
+            animation: emergeFromBottom 2s ease-out forwards; /* Animate logo moving up */
+            z-index: 1;
+        }
+
+        /* Animation for the heading text */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         /* Animation for fading in the navigation */
         @keyframes fadeIn {
             0% {
@@ -79,26 +90,75 @@
         }
 
         /* JB logo animation */
-        .logo {
-            position: absolute;
-            bottom: 20px; /* Initial position */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 280px; /* Original size of logo - 225px */
-            opacity: 0; /* Start with the logo invisible */
-            animation: emergeFromBottom 2s ease-out forwards; /* Animation to move it up and fade in */
-            z-index: 1;
-        }
-
-        /* Animation keyframes for the JB logo */
         @keyframes emergeFromBottom {
             0% {
                 bottom: 20px;
                 opacity: 0;
             }
             100% {
-                bottom: 105px; /* Final position is 125px */
+                bottom: 105px;
                 opacity: 0.9;
+            }
+        }
+
+        /* Responsive design for different screen sizes */
+        @media (max-width: 1024px) {
+            body {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 3rem; /* Slightly smaller on tablets */
+                margin-top: 100px;
+            }
+
+            nav a {
+                font-size: 1.2rem; /* Smaller font for navigation links */
+                margin: 15px;
+            }
+
+            .logo {
+                width: 240px; /* Adjust logo size for medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem; /* Smaller font size for tablets and small laptops */
+                margin-top: 80px;
+            }
+
+            nav a {
+                font-size: 1.1rem; /* Smaller font for navigation links */
+                margin: 10px;
+            }
+
+            .logo {
+                width: 200px; /* Smaller logo for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem; /* Adjusted font size for phones */
+                margin-top: 60px;
+            }
+
+            nav a {
+                font-size: 1rem; /* Smaller font for mobile devices */
+                margin: 8px;
+            }
+
+            .logo {
+                width: 160px; /* Smaller logo for phones */
             }
         }
     </style>
@@ -119,5 +179,4 @@
 
 </body>
 </html>
-
 
