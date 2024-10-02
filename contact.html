@@ -17,17 +17,17 @@
         }
 
         h2 {
-            font-size: 2.5rem; /* Adjusted for better responsiveness */
+            font-size: 2.5rem;
             color: white;
             margin-bottom: 20px;
-            margin-top: 50px; /* Adjusted to create space for the resume button */
+            margin-top: 50px;
         }
 
         p {
             color: white;
-            font-size: 1rem; /* Adjusted for smaller screens */
+            font-size: 1rem;
             margin-bottom: 20px;
-            max-width: 90%; /* Limit width on mobile */
+            max-width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -35,13 +35,13 @@
         form {
             margin: 0 auto;
             width: 100%;
-            max-width: 280px; /* Limit form width for small screens */
+            max-width: 280px;
         }
 
         input, textarea {
             width: 100%;
-            max-width: 100%; /* Make sure inputs stay within the container */
-            padding: 8px; /* Reduced padding for smaller devices */
+            max-width: 100%;
+            padding: 8px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
@@ -53,12 +53,12 @@
             color: black;
             font-weight: bold;
             cursor: pointer;
-            padding: 10px; /* Adjusted padding */
+            padding: 10px;
         }
 
         .social-icons {
             position: fixed;
-            right: 10px; /* Moved closer for mobile */
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
@@ -67,23 +67,23 @@
 
         .social-icons a {
             display: block;
-            margin: 15px 0; /* Increased margin for spacing */
+            margin: 15px 0;
             color: white;
-            font-size: 2.5rem; /* Increased size for better visibility */
+            font-size: 2.5rem;
             transition: color 0.3s ease;
         }
 
         .social-icons a:hover {
-            color: #0077B5; /* LinkedIn blue color on hover */
+            color: #0077B5;
         }
 
         .social-icons a.github:hover {
-            color: #333; /* GitHub dark grey */
+            color: #333;
         }
 
         .resume {
             position: absolute;
-            top: 20px; /* Placed resume button higher, above the header */
+            top: 20px;
             right: 20px;
             color: white;
             font-weight: bold;
@@ -102,7 +102,7 @@
 
         .back-home {
             margin-top: 30px;
-            padding-bottom: 20px; /* Add some space before the logo */
+            padding-bottom: 20px;
         }
 
         .back-home .button {
@@ -120,13 +120,26 @@
             color: #fff200;
         }
 
-        /* Logo styling */
+        /* Logo styling with animation */
         .logo {
             width: 112.5px;
             position: relative;
-            margin: 30px auto 0; /* Position logo below home and back buttons */
+            margin: 30px auto 0;
             display: block;
-            opacity: 1;
+            opacity: 0;
+            animation: emergeFromBottom 2s ease-out forwards; /* Apply animation */
+        }
+
+        /* Keyframes for the logo animation */
+        @keyframes emergeFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(50px); /* Start 50px below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at its normal position */
+            }
         }
 
         /* Responsive Styles */
@@ -136,7 +149,7 @@
             }
 
             .social-icons a {
-                font-size: 3rem; /* Increased size for larger devices */
+                font-size: 3rem;
             }
 
             .resume {
@@ -163,20 +176,19 @@
 
             form {
                 width: 100%;
-                max-width: 250px; /* Limit form width on medium screens */
+                max-width: 250px;
             }
 
             .social-icons {
-                right: 8px; /* Adjusted for better spacing */
+                right: 8px;
             }
 
             .social-icons a {
-                font-size: 2.8rem; /* Increased size on tablets */
+                font-size: 2.8rem;
             }
 
             .resume {
                 font-size: 1.2rem;
-                top: 20px; /* Ensure there's space above the contact me header */
             }
 
             .back-home .button {
@@ -185,7 +197,6 @@
 
             .logo {
                 width: 80px;
-                margin-top: 20px; /* More space between logo and buttons */
             }
         }
 
@@ -196,16 +207,16 @@
             }
 
             p {
-                font-size: 0.9rem; /* Reduced font size for mobile */
+                font-size: 0.9rem;
             }
 
             form {
                 width: 100%;
-                max-width: 220px; /* Narrower form for small screens */
+                max-width: 220px;
             }
 
             input, textarea {
-                padding: 7px; /* Reduced padding for inputs */
+                padding: 7px;
             }
 
             .social-icons {
@@ -213,12 +224,12 @@
             }
 
             .social-icons a {
-                font-size: 2.2rem; /* Larger size for better visibility */
+                font-size: 2.2rem;
             }
 
             .resume {
                 font-size: 1rem;
-                top: 15px; /* More space from the header */
+                top: 15px;
                 right: 10px;
             }
 
@@ -229,7 +240,7 @@
 
             .logo {
                 width: 75px;
-                margin-top: 20px; /* More space between logo and buttons */
+                margin-top: 20px;
             }
         }
     </style>
@@ -256,12 +267,13 @@
     </div>
 
     <div class="back-home">
-        <a href="education.html" class="button">Back</a> <!-- Back to education.html -->
-        <a href="index.html" class="button">Home</a> <!-- Home button -->
+        <a href="education.html" class="button">Back</a>
+        <a href="index.html" class="button">Home</a>
     </div>
 
     <img src="JBlogo_white_on_black-removebg-preview.png" alt="New Logo" class="logo">
 
 </body>
 </html>
+
 
