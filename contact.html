@@ -78,7 +78,7 @@
 
         .resume {
             position: absolute;
-            top: 20px;
+            top: 70px; /* Increased space from the header */
             right: 20px;
             color: white;
             font-weight: bold;
@@ -97,6 +97,7 @@
 
         .back-home {
             margin-top: 30px;
+            padding-bottom: 20px; /* Add some space before the logo */
         }
 
         .back-home .button {
@@ -117,10 +118,9 @@
         /* Logo styling */
         .logo {
             width: 112.5px;
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin: 30px auto 0; /* Position logo below home and back buttons */
+            display: block;
             opacity: 1;
         }
 
@@ -144,7 +144,6 @@
 
             .logo {
                 width: 90px;
-                bottom: 40px;
             }
         }
 
@@ -172,6 +171,7 @@
 
             .resume {
                 font-size: 1.2rem;
+                top: 60px; /* Adjusted for more space on mobile */
             }
 
             .back-home .button {
@@ -180,7 +180,7 @@
 
             .logo {
                 width: 80px;
-                bottom: 40px;
+                margin-top: 20px; /* More space between logo and buttons */
             }
         }
 
@@ -209,7 +209,7 @@
 
             .resume {
                 font-size: 1rem;
-                top: 10px;
+                top: 60px; /* More space from the header */
                 right: 10px;
             }
 
@@ -220,7 +220,7 @@
 
             .logo {
                 width: 75px;
-                bottom: 40px;
+                margin-top: 20px; /* More space between logo and buttons */
             }
         }
     </style>
