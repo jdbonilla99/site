@@ -3,189 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Bonilla - Cover</title>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
+            background-color: #000;
             font-family: Arial, sans-serif;
+            color: white;
             text-align: center;
-            background-image: url('newbg.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: black;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh; /* Ensure it takes the full screen height */
+            box-sizing: border-box;
             position: relative;
-            padding: 50px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            z-index: 2; /* Ensure text is above the background */
+            position: relative;
+        }
+
+        p {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 2; /* Ensure text is above the background */
+            position: relative;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 280px;
+            z-index: 2; /* Ensure form is above the background */
+            position: relative;
+        }
+
+        input, textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
             box-sizing: border-box;
         }
 
-        h1 {
-            font-size: 5vw; /* Dynamic font size for better scaling */
-            color: #FFFFFF;
-            margin-top: 15vh; /* Adjusted margin to prevent logo overlap */
-            position: relative;
-            z-index: 1;
-            animation: slideInFromTop 1.5s ease-out forwards;
-            opacity: 0;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #FFFFFF;
-            margin: 10px;
-            font-size: 1.5vw; /* Dynamic font size for links */
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 0.5s;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+        .social-icons {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 2; /* Ensure social icons are above the background */
         }
 
-        nav {
-            margin-top: 10vh;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 0.5s;
+        .social-icons a {
+            display: block;
+            margin: 15px 0;
+            color: white;
+            font-size: 2.5rem;
+            transition: color 0.3s ease;
         }
 
-        .logo {
+        .social-icons a:hover {
+            color: #0077B5;
+        }
+
+        .social-icons a.github:hover {
+            color: #333;
+        }
+
+        .resume {
             position: absolute;
-            bottom: 5vh; /* Adjusted to ensure the logo is not too close to the bottom */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 15vw; /* Logo size using viewport width */
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            z-index: 2; /* Ensure resume button is above the background */
+        }
+
+        .resume a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .resume a:hover {
+            color: green;
+        }
+
+        .back-home {
+            margin-top: 30px;
+            padding-bottom: 20px;
+            z-index: 2; /* Ensure back and home buttons are above the background */
+            position: relative;
+        }
+
+        .back-home .button {
+            color: yellow;
+            text-decoration: none;
+            font-size: 1.5rem;
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home .button:hover {
+            color: #fff200;
+        }
+
+        /* Logo styling with animation */
+        .logo {
+            width: 112.5px;
+            position: relative;
+            margin: 30px auto 0;
+            display: block;
             opacity: 0;
             animation: emergeFromBottom 2s ease-out forwards;
-            z-index: 1;
+            z-index: 2; /* Ensure logo is above the background */
         }
 
-        /* Animation for the heading text */
-        @keyframes slideInFromTop {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Animation for fading in the navigation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* JB logo animation */
+        /* Keyframes for the logo animation */
         @keyframes emergeFromBottom {
             0% {
-                bottom: 20px;
                 opacity: 0;
+                transform: translateY(50px); /* Start 50px below */
             }
             100% {
-                bottom: 10vh;
-                opacity: 0.9;
+                opacity: 1;
+                transform: translateY(0); /* End at its normal position */
             }
         }
 
-        /* Responsive design for different screen sizes */
+        /* Responsive Styles */
         @media (max-width: 1024px) {
-            h1 {
-                font-size: 4vw; /* Slightly reduced size for tablets */
-                margin-top: 20vh;
+            h2 {
+                font-size: 2.2rem;
             }
 
-            nav a {
-                font-size: 1.3vw;
-                margin: 8px;
+            .social-icons a {
+                font-size: 3rem;
+            }
+
+            .resume {
+                font-size: 1.3rem;
+            }
+
+            .back-home .button {
+                font-size: 1.3rem;
             }
 
             .logo {
-                width: 18vw; /* Adjust logo size for medium screens */
-                bottom: 7vh;
+                width: 90px;
             }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 6vw;
-                margin-top: 25vh;
+            body {
+                padding: 10px;
             }
 
-            nav a {
-                font-size: 3vw;
-                margin: 10px;
+            h2 {
+                font-size: 2rem;
+            }
+
+            form {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .social-icons {
+                right: 8px;
+            }
+
+            .social-icons a {
+                font-size: 2.8rem;
+            }
+
+            .resume {
+                font-size: 1.2rem;
+            }
+
+            .back-home .button {
+                font-size: 1.2rem;
             }
 
             .logo {
-                width: 22vw;
-                bottom: 5vh;
+                width: 80px;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 20px;
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
             }
 
-            h1 {
-                font-size: 7vw;
-                margin-top: 15vh;
+            p {
+                font-size: 0.9rem;
             }
 
-            nav a {
-                font-size: 4vw;
-                margin: 10px;
-                display: block; /* Ensure links are on separate lines on small screens */
+            form {
+                width: 100%;
+                max-width: 220px;
+            }
+
+            input, textarea {
+                padding: 7px;
+            }
+
+            .social-icons {
+                right: 5px;
+            }
+
+            .social-icons a {
+                font-size: 2.2rem;
+            }
+
+            .resume {
+                font-size: 1rem;
+                top: 15px;
+                right: 10px;
+            }
+
+            .back-home .button {
+                font-size: 1rem;
+                padding: 5px 10px;
             }
 
             .logo {
-                width: 25vw;
-                bottom: 5vh;
+                width: 75px;
+                margin-top: 20px;
             }
         }
-
-        /* For high zoom/resolution cases */
-        @media (min-width: 2560px) and (max-height: 1440px) {
-            h1 {
-                font-size: 3vw;
-                margin-top: 18vh;
-            }
-
-            nav a {
-                font-size: 1.2vw;
-            }
-
-            .logo {
-                width: 12vw; /* Reduce logo size for larger screens */
-                bottom: 12vh;
-            }
-        }
-
     </style>
 </head>
 <body>
 
-    <h1>Jonathan Bonilla's Portfolio</h1>
+    <div class="resume">
+        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Resume</a>
+    </div>
 
-    <nav>
-        <a href="aboutme.html">About Me</a>
-        <a href="masters.html">Master's Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+    <h2>Contact Me</h2>
+    <p>If you would like to contact me, please use the form below</p>
 
-    <img src="JBlogo_uniform_shadow.png" alt="JB Logo" class="logo">
+    <form action="mailto:jdbonilla99@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jdbonilla" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jdbonilla" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="back-home">
+        <a href="education.html" class="button">Back</a>
+        <a href="index.html" class="button">Home</a>
+    </div>
+
+    <img src="JBlogo_white_on_black-removebg-preview.png" alt="New Logo" class="logo">
 
 </body>
 </html>
+
 
 
