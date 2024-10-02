@@ -25,6 +25,7 @@
             font-family: 'Montserrat', sans-serif;
             padding: 20px;
             overflow-x: hidden;
+            padding-bottom: 200px; /* Added padding at the bottom */
         }
 
         h2 {
@@ -33,7 +34,9 @@
             color: #003366;
             text-align: center;
             margin-bottom: 20px;
-            border-bottom: 2px solid #001f3f;
+            display: inline-block; /* Makes the underline only cover the text */
+            border-bottom: 2px solid #001f3f; /* Adds an underline */
+            padding-bottom: 5px; /* Adjusts spacing between title and underline */
         }
 
         .content-wrapper {
@@ -41,23 +44,10 @@
             margin: 0 auto;
         }
 
-        .abstract {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
         p {
             font-size: 1.2rem;
             margin: 15px 0;
             color: #FFFFFF;
-        }
-
-        .key-findings {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
         }
 
         ul {
@@ -194,10 +184,9 @@
 <body>
     <div class="content-wrapper">
         <h2>Master's Research <i class="fas fa-microscope"></i></h2>
-        <div class="abstract">
-            <p><strong class="highlight">Abstract:</strong> This research focuses on developing and evaluating child-centered technologies to support remote monitoring of pediatric patients, with an emphasis on childhood cancer and pediatric chronic pain. The goal is to create a personalized, continuous, and scalable monitoring system that can be deployed in both clinical and home settings to augment care.</p>
-            <p>The project involves the design, implementation, and evaluation of toy-based prototypes that integrate sensors for assessing markers of distress, such as heart rate, oximetry, and movement. These sensors provide emotional measures for therapists and families. The toy's playful design promotes engagement with children, improving their mood after just 30 minutes of interaction. The project aims to enhance emotional monitoring and provide real-time support for pediatric patients.</p>
-        </div>
+        <p><strong class="highlight">Abstract:</strong> This research focuses on developing and evaluating child-centered technologies to support remote monitoring of pediatric patients, with an emphasis on childhood cancer and pediatric chronic pain. The goal is to create a personalized, continuous, and scalable monitoring system that can be deployed in both clinical and home settings to augment care.</p>
+        <p>The project involves the design, implementation, and evaluation of toy-based prototypes that integrate sensors for assessing markers of distress, such as heart rate, oximetry, and movement. These sensors provide emotional measures for therapists and families. The toy's playful design promotes engagement with children, improving their mood after just 30 minutes of interaction. The project aims to enhance emotional monitoring and provide real-time support for pediatric patients.</p>
+
         <div class="icon-links">
             <a href="Finalthesis.pdf" target="_blank" aria-label="Download Final Thesis">
                 <i class="fas fa-file-alt"></i>
@@ -206,14 +195,13 @@
                 <i class="fas fa-file-powerpoint"></i>
             </a>
         </div>
-        <div class="key-findings">
-            <h3>Key Findings</h3>
-            <ul>
-                <li>Sensor signals for heart rate, oximetry, and movement can effectively assess emotional distress in children.</li>
-                <li>The toy's design promotes high levels of engagement and emotional support among pediatric patients.</li>
-                <li>Preliminary findings suggest improved mood and emotional well-being after short-term interaction with the device.</li>
-            </ul>
-        </div>
+
+        <h3>Key Findings</h3>
+        <ul>
+            <li>Sensor signals for heart rate, oximetry, and movement can effectively assess emotional distress in children.</li>
+            <li>The toy's design promotes high levels of engagement and emotional support among pediatric patients.</li>
+            <li>Preliminary findings suggest improved mood and emotional well-being after short-term interaction with the device.</li>
+        </ul>
 
         <!-- Image Grid -->
         <div class="image-grid">
@@ -246,11 +234,9 @@
         </div>
     </div>
 
-    <!-- AOS Script Initialization -->
     <script>
         AOS.init();
     </script>
 </body>
 </html>
-
 
