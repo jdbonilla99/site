@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background-color: #fff; /* Change background to white */
+            background-color: #fff; /* White background */
             color: #000;
             font-family: 'Montserrat', sans-serif;
             margin: 40px;
@@ -30,9 +30,9 @@
             font-family: 'Lora', serif;
             font-size: 2.5rem;
             color: #003366;
-            border-bottom: 2px solid #003366; /* Underline color matches the title color */
+            border-bottom: 2px solid #003366;
             padding-bottom: 10px;
-            display: inline-block; /* This makes the underline only span the width of the content */
+            display: inline-block;
         }
 
         /* Updated project-item styling */
@@ -42,42 +42,45 @@
             align-items: center;
             padding: 20px;
             border-radius: 10px;
-            background-color: #4FACFE; /* Set text box background to match the title color */
+            background-color: #4FACFE;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
+
         .project-item:hover {
             transform: translateY(-10px);
         }
+
         .project-item img {
             width: 100%;
-            height: auto; /* Ensure all images maintain their aspect ratio */
-            border: 2px solid #ddd; /* Border for the image */
-            border-radius: 10px; /* Rounded corners for the image */
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
             padding: 10px;
             background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Image shadow */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         /* Styling for the project title */
         .project-item h3 {
             font-size: 1.5rem;
-            color: #FFD700; /* Set project titles to gold */
-            margin: 10px 0 5px 0; /* Add margin between title and text */
+            color: #FFD700;
+            margin: 10px 0 5px 0;
             text-align: center;
         }
 
         .project-item p {
             margin-top: 5px;
             font-size: 1.2rem;
-            text-align: left; /* Align text to the left */
-            color: #fff; /* Change text inside textboxes to white */
+            text-align: left;
+            color: #fff;
         }
 
+        /* Image gallery layout */
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Grid layout */
+            grid-template-columns: repeat(3, 1fr); /* 3 items per row */
             gap: 20px;
         }
 
@@ -89,6 +92,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         a:hover, button:hover {
             background-color: #FFD700;
             color: #003366;
@@ -115,13 +119,78 @@
             background-color: #003366;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
+            margin: 0 10px;
             transition: all 0.3s ease;
         }
 
         .home-link .button:hover {
             background-color: #FFD700;
             color: #003366;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .project-item p {
+                font-size: 1.1rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+            }
+
+            .home-link .button {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+                padding-bottom: 60px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .project-item p {
+                font-size: 1rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr; /* 1 item per row */
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+            }
+
+            .logo {
+                width: 90px; /* Smaller logo for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-item p {
+                font-size: 0.9rem;
+            }
+
+            .home-link .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px; /* Smaller logo for mobile */
+            }
         }
     </style>
 </head>
