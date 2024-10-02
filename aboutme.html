@@ -30,8 +30,8 @@
             align-items: center;
             color: black;
             position: relative;
-            min-height: 130vh; /* Ensure the content takes at least 130% of the viewport height */
-            padding-bottom: 50px; /* Add some padding at the bottom to avoid buttons getting cut off */
+            min-height: 100vh; /* Set to 100vh to cover full viewport height */
+            width: 100%;
         }
 
         .about-me::before {
@@ -208,11 +208,12 @@
         @media (max-width: 480px) {
             .about-me {
                 background-size: 110%;
-                min-height: 150vh; /* Increase page length on mobile to avoid cutting off buttons */
+                min-height: 100vh; /* Set the height to 100% of viewport */
             }
 
             .about-content {
                 padding: 10px;
+                min-height: 100vh; /* Ensures content covers the full height of the page */
             }
 
             h1 {
@@ -306,5 +307,6 @@
 
 </body>
 </html>
+
 
 
