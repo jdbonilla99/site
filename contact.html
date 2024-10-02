@@ -12,17 +12,19 @@
             color: white;
             text-align: center;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         h2 {
             font-size: 3rem;
             color: white;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         p {
             color: white;
             font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         form {
@@ -51,6 +53,8 @@
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
         }
 
         .social-icons a {
@@ -70,9 +74,7 @@
         }
 
         .resume {
-            position: fixed;
-            top: 20px;
-            right: 20px;
+            margin-bottom: 20px;
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
@@ -89,7 +91,7 @@
         }
 
         .back-home {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .back-home .button {
@@ -111,23 +113,10 @@
         .logo {
             width: 112.5px;
             position: absolute;
-            bottom: 100px;
+            bottom: 80px;
             left: 50%;
-            transform: translateX(-50%) translateY(200px); /* Start below the screen */
-            opacity: 0;
-            animation: slideUp 2s ease forwards;
-        }
-
-        /* Keyframes for sliding the logo up */
-        @keyframes slideUp {
-            0% {
-                transform: translateX(-50%) translateY(200px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
+            transform: translateX(-50%);
+            opacity: 1;
         }
 
         /* Responsive Styles */
@@ -137,20 +126,20 @@
             }
 
             .social-icons a {
-                font-size: 2.5rem; /* Reduce icon size for tablets */
+                font-size: 2.5rem;
             }
 
             .resume {
-                font-size: 1.3rem; /* Reduce resume button size */
+                font-size: 1.3rem;
             }
 
             .back-home .button {
                 font-size: 1.3rem;
-                padding: 8px 15px;
             }
 
             .logo {
-                width: 90px; /* Reduce logo size for tablets */
+                width: 90px;
+                bottom: 70px;
             }
         }
 
@@ -164,34 +153,36 @@
             }
 
             form {
-                width: 250px; /* Narrower form for smaller screens */
+                width: 100%;
             }
 
             .social-icons {
-                right: 10px; /* Bring icons closer to the center */
+                right: 10px;
             }
 
             .social-icons a {
-                font-size: 2rem; /* Further reduce icon size for smaller screens */
+                font-size: 2rem;
             }
 
             .resume {
-                font-size: 1.2rem; /* Further reduce resume button size */
+                font-size: 1.2rem;
+                margin-bottom: 30px;
             }
 
             .back-home .button {
                 font-size: 1.2rem;
-                padding: 7px 10px;
             }
 
             .logo {
-                width: 80px; /* Further reduce logo size */
+                width: 80px;
+                bottom: 60px;
             }
         }
 
         @media (max-width: 480px) {
             h2 {
                 font-size: 1.8rem;
+                margin-bottom: 15px;
             }
 
             form {
@@ -199,19 +190,20 @@
             }
 
             input, textarea {
-                padding: 8px; /* Smaller padding for mobile */
+                padding: 8px;
             }
 
             .social-icons {
-                right: 5px; /* Bring icons even closer */
+                right: 5px;
             }
 
             .social-icons a {
-                font-size: 1.5rem; /* Smaller icons on mobile */
+                font-size: 1.5rem;
             }
 
             .resume {
                 font-size: 1rem;
+                margin-bottom: 20px;
             }
 
             .back-home .button {
@@ -220,7 +212,12 @@
             }
 
             .logo {
-                width: 75px; /* Smallest logo for mobile */
+                width: 75px;
+                bottom: 50px;
+            }
+
+            .resume {
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -237,25 +234,24 @@
         <input type="submit" value="Send">
     </form>
 
+    <div class="resume">
+        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Click for Resume</a>
+    </div>
+
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/jdbonilla" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/jdbonilla" target="_blank" class="github"><i class="fab fa-github"></i></a>
     </div>
 
-    <div class="resume">
-        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Click for Resume</a>
-    </div>
-
-    <!-- Navigation Links (Back to Education, Home) -->
     <div class="back-home">
         <a href="education.html" class="button">Back</a> <!-- Back to education.html -->
         <a href="index.html" class="button">Home</a> <!-- Home button -->
     </div>
 
-    <!-- Add the new logo -->
     <img src="JBlogo_white_on_black-removebg-preview.png" alt="New Logo" class="logo">
 
 </body>
 </html>
+
 
 
