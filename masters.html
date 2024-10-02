@@ -26,16 +26,6 @@
             color: #FFFFFF; /* White text */
             font-family: 'Montserrat', sans-serif;
             padding-bottom: 100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Container for consistent margins */
-        .container {
-            padding-left: 5%;
-            padding-right: 5%;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         h2 {
@@ -46,14 +36,40 @@
             padding-bottom: 10px;
             margin: 30px 0;
             text-align: center;
-            gap: 10px; /* Adds space between the title and the icon */
+        }
+
+        .icon-links {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .document-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px; /* Reduced width */
+            height: 18px; /* Reduced height */
+            background-color: transparent;
+            border: 1.5px solid #FFD700; /* Smaller border */
+            border-radius: 3px; /* Smaller rounded corners */
+            color: #FFD700;
+            font-size: 1rem; /* Smaller icon size */
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .document-link:hover {
+            background-color: #FFD700;
+            color: #003366;
         }
 
         p, li {
             font-size: 1.2rem;
             color: #FFFFFF;
             margin: 15px 0;
-            word-wrap: break-word; /* Allow words to break to the next line */
+            padding: 0 10px; /* Add padding to both sides */
+            word-wrap: break-word; /* Ensure no text overflow */
         }
 
         ul {
@@ -79,54 +95,29 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+            flex-wrap: wrap;
+            padding: 0 10px; /* Ensure margin on both sides */
         }
 
-        .icon-links {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        }
-
-        .document-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 18px; /* Reduced width */
-            height: 18px; /* Reduced height */
-            background-color: transparent;
-            border: 1.5px solid #FFD700; /* Smaller border */
-            border-radius: 3px; /* Smaller rounded corners */
-            color: #FFD700;
-            font-size: 1rem; /* Smaller icon size */
-            text-decoration: none;
-            transition: color 0.3s ease, background-color 0.3s ease;
-        }
-
-        .document-link:hover {
-            background-color: #FFD700;
-            color: #003366;
-        }
-
-        /* Center images */
+        /* Image Grid */
         .image-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two-column layout for larger screens */
+            grid-template-columns: 1fr; /* Default to one column */
             justify-content: center;
             gap: 20px;
             margin: 20px 0;
-            width: 100%; /* Prevent the images from going wider than the viewport */
+            padding: 0 10px; /* Add padding to the grid */
         }
 
         .image-container {
             text-align: center;
             transition: transform 0.3s ease;
-            margin: 0 auto; /* Ensure the image container is centered */
+            margin: 0 auto;
+            max-width: 100%;
         }
 
         .image-container img {
-            width: 100%; /* Fit the image within the container */
+            width: 100%;
             height: auto;
             border: 2px solid #ddd;
             border-radius: 10px;
@@ -157,9 +148,7 @@
             margin: 20px auto;
             display: block;
             transition: transform 0.3s ease;
-            border: none; /* Remove border */
-            padding: 0; /* Remove padding */
-            background-color: transparent; /* Remove background */
+            border: none;
         }
 
         .logo:hover {
@@ -178,31 +167,17 @@
             margin: 0 10px;
         }
 
+        /* Highlight Class */
+        .highlight {
+            color: #FFD700;
+        }
+
         /* Responsive Styles */
-        @media (max-width: 1024px) {
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            p, li {
-                font-size: 1.1rem;
-            }
-
+        @media (min-width: 769px) {
             .image-grid {
-                grid-template-columns: 1fr; /* Stack images for smaller screens */
-            }
-
-            a, button {
-                padding: 8px 16px;
-                font-size: 1.3rem;
-            }
-
-            .home-link .button {
-                font-size: 1.3rem;
-            }
-
-            .logo {
-                width: 100px;
+                grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+                gap: 20px;
+                padding: 0 10px; /* Padding for larger screens */
             }
         }
 
@@ -213,6 +188,11 @@
 
             p, li {
                 font-size: 1rem;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr; /* Stack images vertically */
+                gap: 10px;
             }
 
             a, button {
@@ -252,8 +232,8 @@
             }
 
             .document-link {
-                font-size: 0.8rem; /* Slightly smaller icons on mobile */
-                width: 15px; /* Adjust size for mobile screens */
+                font-size: 0.8rem;
+                width: 15px;
                 height: 15px;
             }
         }
@@ -261,7 +241,7 @@
 </head>
 <body>
 
-    <section id="research" class="research container">
+    <section id="research" class="research">
         <h2 data-aos="fade-down">
             Master's Research <i class="fas fa-microscope"></i>
         </h2>
@@ -288,7 +268,7 @@
     </section>
 
     <!-- Image Grid with AOS Animations -->
-    <div class="image-grid container">
+    <div class="image-grid">
         <div class="image-container" data-aos="fade-up" data-aos-duration="1000">
             <img src="WhatsApp Image 2024-05-23 at 6.11.36 PM.png" alt="3D Toy Design">
             <p>Figure 1: 3D design of the smart toy prototype.</p>
@@ -324,6 +304,5 @@
 
 </body>
 </html>
-
 
 
