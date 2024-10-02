@@ -19,6 +19,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .about-me {
@@ -58,6 +59,7 @@
             width: 100%; /* Ensure the content takes up full width */
             max-width: 1200px; /* Limit max width */
             min-height: 100vh; /* Ensure the content has a minimum height that fills the viewport */
+            padding-bottom: 80px; /* Add padding to prevent cut-off on smaller screens */
         }
 
         .about-content:hover {
@@ -208,12 +210,12 @@
         @media (max-width: 480px) {
             .about-me {
                 background-size: 110%;
-                min-height: 100vh; /* Set the height to 100% of viewport */
+                min-height: 120vh; /* Ensure full content display on mobile */
             }
 
             .about-content {
                 padding: 10px;
-                min-height: 100vh; /* Ensures content covers the full height of the page */
+                min-height: 120vh; /* Extend the height for mobile to avoid cutting off buttons */
             }
 
             h1 {
@@ -227,6 +229,10 @@
             ul li {
                 width: 100%; /* Full width for mobile */
                 font-size: 1rem;
+            }
+
+            .home-link {
+                padding-bottom: 80px; /* Extend padding to avoid button cutoff */
             }
 
             .home-link .button {
@@ -307,6 +313,4 @@
 
 </body>
 </html>
-
-
 
