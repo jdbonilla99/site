@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #fff; /* Change background to white */
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            margin: 40px;
+            padding-bottom: 100px;
+        }
+
+        /* Center the title */
+        .title-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 2px solid #003366; /* Underline color matches the title color */
+            padding-bottom: 10px;
+            display: inline-block; /* This makes the underline only span the width of the content */
+        }
+
+        /* Updated project-item styling */
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #4FACFE; /* Set text box background to match the title color */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        }
+        .project-item:hover {
+            transform: translateY(-10px);
+        }
+        .project-item img {
+            width: 100%;
+            height: auto; /* Ensure all images maintain their aspect ratio */
+            border: 2px solid #ddd; /* Border for the image */
+            border-radius: 10px; /* Rounded corners for the image */
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Image shadow */
+        }
+
+        /* Styling for the project title */
+        .project-item h3 {
+            font-size: 1.5rem;
+            color: #FFD700; /* Set project titles to gold */
+            margin: 10px 0 5px 0; /* Add margin between title and text */
+            text-align: center;
+        }
+
+        .project-item p {
+            margin-top: 5px;
+            font-size: 1.2rem;
+            text-align: left; /* Align text to the left */
+            color: #fff; /* Change text inside textboxes to white */
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Grid layout */
+            gap: 20px;
+        }
+
+        a, button {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover, button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 112.5px;
+            margin: 20px auto;
+            display: block;
+            background-color: transparent;
+        }
+
+        .home-link {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .home-link .button {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #FFD700;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px; /* Add margin between buttons */
+            transition: all 0.3s ease;
+        }
+
+        .home-link .button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered title container -->
+    <div class="title-container" data-aos="fade-down">
+        <h2>Projects <i class="fas fa-briefcase"></i></h2>
+    </div>
+
+    <div class="image-gallery">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1000">
+            <img src="Armprostheses.png" alt="3D-Printed Arm Prostheses">
+            <h3>3D-Printed Arm Prostheses for LMICs</h3>
+            <p>Designed affordable, functional arm prostheses for low- and middle-income countries (LMICs). Using 3D printing technology and affordable thermoplastics like polypropylene, the prostheses offer a customizable solution to individuals with arm amputations.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1200">
+            <img src="laparoscopic.png" alt="Laparoscopic Probe">
+            <h3>Laparoscopic Probe for Prostate Cancer Margin Detection</h3>
+            <p>Developed the mechanical housing for a laparoscopic bioimpedance probe designed to detect positive surgical margins in prostate cancer patients during laparoscopic prostatectomy.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1400">
+            <img src="nanoparticlescancer.png" alt="Nanotechnology for Cancer Treatment">
+            <h3>Gold Nanoparticle-Enhanced Radiation Therapy for Cancer</h3>
+            <p>Developed a novel treatment for pancreatic cancer using gold nanoparticles functionalized with P1G4 antibodies. The aim was to assess the effectiveness of these nanoparticles in enhancing radiation therapy, targeting pancreatic tumors more specifically and improving treatment outcomes.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1600">
+            <img src="Bridge.png" alt="Bridge Design Project">
+            <h3>ENGS 33 Bridge Design Project</h3>
+            <p>Designed a truss bridge as part of a solid mechanics course to test structural efficiency and material usage.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1800">
+            <img src="Calculator.png" alt="UART Calculator Project">
+            <h3>ENGS 31 UART Calculator Project</h3>
+            <p>This project involved the development of a UART-based calculator using a Basys 3 board and a PS/2 keyboard.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2000">
+            <img src="microfluidic.png" alt="Microfluidic Cervical Cancer Device">
+            <h3>Point-of-Care Cervical Cancer HPV Screening Device</h3>
+            <p>Developed a low-cost, point-of-care device aimed at improving cervical cancer screening, particularly in low-resource settings such as Honduras.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2200">
+            <img src="Recycling.png" alt="Recycling Project">
+            <h3>Bottles, Bins, and Beyond (Recycling Contamination Reduction)</h3>
+            <p>Developed a recycling bin system aimed at reducing contamination in beverage container recycling.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2400">
+            <img src="nanoparticlesglucose.png" alt="Glucose Monitor using Nanoparticles">
+            <h3>Sweat-Based Glucose Monitor</h3>
+            <p>Developed a non-invasive glucose monitoring device that uses sweat as a medium to measure glucose levels, eliminating the need for blood samples.</p>
+        </div>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2600">
+            <img src="NiFe.png" alt="NiFe Permanent Magnets">
+            <h3>NiFe Permanent Magnets for Electric Motors and Turbines</h3>
+            <p>Investigated the properties of NiFe (Nickel-Iron) permanent magnets for potential applications in electric motors and wind turbines.</p>
+        </div>
+    </div>
+
+    <!-- JB Logo -->
+    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+    <!-- Navigation Links (Back, Home, Next) -->
+    <div class="home-link" data-aos="fade-up">
+        <a href="masters.html" class="button">Back</a> <!-- Back to masters.html -->
+        <a href="index.html" class="button">Home</a> <!-- Home button -->
+        <a href="education.html" class="button">Next</a> <!-- Next to education.html -->
+    </div>
+
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>

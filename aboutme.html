@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+
+        .about-me {
+            background-image: url('Jonathan.jpeg'); /* Path to the image */
+            background-size: 150%; /* Zoom out by increasing size */
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            position: relative;
+            min-height: 130vh; /* Increase the height to prevent content from being cut off */
+        }
+
+        .about-me::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Darken background more */
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 30px 30px 60px; /* Increase bottom padding */
+            background-color: rgba(255, 255, 255, 0.9); /* White box background */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .about-content:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            display: inline-block; /* Ensures underline is only under the text */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 40px; /* Add extra space below the description */
+        }
+
+        .lists {
+            margin-top: 50px; /* Increase space above the lists */
+        }
+
+        .list-container {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul li {
+            background-color: #4FACFE; /* Muted blue-gray background */
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease;
+            color: #FFFFFF;
+            font-size: 1.3rem; /* Increase the font size */
+
+        }
+
+        ul li:hover {
+            transform: translateY(-5px);
+        }
+
+        .home-link {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .home-link .button {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #FFD700;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px; /* Add margin between buttons */
+            transition: all 0.3s ease;
+        }
+
+        .home-link .button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        .logo {
+            width: 112.5px;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: transparent;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-me">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
+            <h1>About Jonathan Bonilla</h1>
+            <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
+            
+            <!-- Technical Skills Section -->
+            <div class="lists">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li>Medical Devices</li>
+                        <li>Biomedical Engineering</li>
+                        <li>Robotics</li>
+                        <li>SolidWorks</li>
+                        <li>3D Printing</li>
+                        <li>Technical Writing</li>
+                        <li>Data Analysis</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Spanish (Native)</li>
+                        <li>Italian (Proficiency)</li>
+                        <li>French (Intermediate)</li>
+                        <li>Mandarin (Basic)</li>
+                        <li>Portuguese (Basic)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- JB Logo -->
+            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+            <!-- Home and Next Links -->
+            <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
+                <a href="index.html" class="button">Home</a>
+                <a href="masters.html" class="button">Next</a> <!-- Linked to masters.html -->
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
+

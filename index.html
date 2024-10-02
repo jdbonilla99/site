@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Bonilla - Cover</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensure full height */
+        }
+
+        body {
+            background-image: url('newbg.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: black; /* Set all text to black */
+            position: relative;
+            min-height: 100vh;
+            padding: 50px; /* Add 50px margin around the body */
+            box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
+        }
+
+        h1 {
+            font-size: 4rem; /* Increased the size of the title */
+            color: #FFFFFF; /* Title color */
+            margin-top: 150px; /* Lowered the header */
+            position: relative;
+            z-index: 1;
+            animation: slideInFromTop 1.5s ease-out forwards; /* Apply slide-in animation */
+            opacity: 0; /* Start as invisible */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Added shadow to the text */
+        }
+
+        /* Animation for the heading text */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFFFFF; /* Navigation links color */
+            margin: 20px;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+            animation-delay: 0.5s; /* Delay to sync with the h1 animation */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Added shadow to navigation links */
+        }
+
+        nav {
+            margin-top: 80px; /* Lowered the navigation */
+            opacity: 0; /* Initially invisible */
+            animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation */
+            animation-delay: 0.5s; /* Delay for a smooth transition */
+        }
+
+        /* Animation for fading in the navigation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* JB logo animation */
+        .logo {
+            position: absolute;
+            bottom: 20px; /* Initial position */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px; /* Original size of logo - 225px */
+            opacity: 0; /* Start with the logo invisible */
+            animation: emergeFromBottom 2s ease-out forwards; /* Animation to move it up and fade in */
+            z-index: 1;
+        }
+
+        /* Animation keyframes for the JB logo */
+        @keyframes emergeFromBottom {
+            0% {
+                bottom: 20px;
+                opacity: 0;
+            }
+            100% {
+                bottom: 105px; /* Final position is 125px */
+                opacity: 0.9;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Jonathan Bonilla's Portfolio</h1>
+
+    <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="masters.html">Master's Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <img src="JBlogo_uniform_shadow.png" alt="JB Logo" class="logo">
+
+</body>
+</html>
+
+

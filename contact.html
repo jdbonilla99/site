@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 300px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .social-icons a {
+            display: block;
+            margin: 10px 0;
+            color: white;
+            font-size: 3rem; /* Increased icon size */
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0077B5; /* LinkedIn blue color on hover */
+        }
+
+        .social-icons a.github:hover {
+            color: #333; /* GitHub dark grey */
+        }
+
+        .resume {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem; /* Increased resume button size */
+        }
+
+        .resume a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Adding transition for smooth effect */
+        }
+
+        .resume a:hover {
+            color: green; /* Changing color to green on hover */
+        }
+
+        .back-home {
+            margin-top: 20px;
+        }
+
+        .back-home .button {
+            color: yellow; /* Changed color to yellow */
+            text-decoration: none;
+            font-size: 1.5rem; /* Increased font size */
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px; /* Add margin between buttons */
+            transition: all 0.3s ease;
+        }
+
+        .back-home .button:hover {
+            color: #fff200; /* Brighter yellow on hover */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 112.5px; /* Half the original 225px */
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(200px); /* Start below the screen */
+            opacity: 0; /* Initially invisible */
+            animation: slideUp 2s ease forwards; /* Animation applied */
+        }
+
+        /* Keyframes for sliding the logo up */
+        @keyframes slideUp {
+            0% {
+                transform: translateX(-50%) translateY(200px); /* Start below */
+                opacity: 0; /* Invisible at the start */
+            }
+            100% {
+                transform: translateX(-50%) translateY(0); /* End at the original position */
+                opacity: 1; /* Fully visible at the end */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Contact Me</h2>
+    <p>If you would like to contact me, please use the form below</p>
+
+    <form action="mailto:jdbonilla99@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jdbonilla" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jdbonilla" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="resume">
+        <a href="JonathanBonillaResume.docx.pdf" target="_blank">Click for Resume</a>
+    </div>
+
+    <!-- Navigation Links (Back to Education, Home) -->
+    <div class="back-home">
+        <a href="education.html" class="button">Back</a> <!-- Back to education.html -->
+        <a href="index.html" class="button">Home</a> <!-- Home button -->
+    </div>
+
+    <!-- Add the new logo -->
+    <img src="JBlogo_white_on_black-removebg-preview.png" alt="New Logo" class="logo">
+
+</body>
+</html>
+

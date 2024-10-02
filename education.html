@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Courses</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4FACFE, #003366);
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            margin: 40px;
+            padding-bottom: 100px; /* Add padding at the bottom */
+        }
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .education, .courses {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .education-item, .courses-item {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .education-item:hover, .courses-item:hover {
+            transform: translateY(-10px);
+        }
+        a, button {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover, button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        /* Reduce the gap between the last education item and the logo */
+        .education {
+            margin-bottom: 10px; /* Reduce the bottom margin to move logo closer */
+        }
+
+        /* Remove any unnecessary margin above the logo */
+        .logo {
+            width: 112.5px;
+            margin: -60px auto 10px auto; /* Move logo up even more by using a larger negative margin */
+            display: block;
+            background-color: transparent;
+        }
+
+        .home-link {
+            margin-top: 20px; /* Moved the home button higher */
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .home-link .button {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #FFD700;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px; /* Add margin between buttons */
+            transition: all 0.3s ease;
+        }
+
+        .home-link .button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        /* Increase size of list items under courses */
+        .courses-item ul {
+            font-size: 1.1rem; /* Increase the font size */
+            line-height: 1.3;  /* Add some spacing between the list items */
+            padding-left: 20px; /* Optional: add some padding to the left of the list */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
+            <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
+            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+            <p>Focus: Medical Devices, Human-Centered Design</p>
+        </div>
+
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+            <h3>Bachelor of Engineering (2017 - 2022)</h3>
+            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+            <p>Focus: Bioelectronics, Biomechanics</p>
+        </div>
+
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+            <h3>Bachelor of Arts (2017 - 2021)</h3>
+            <p><strong><em>Dartmouth College</em></strong></p>
+            <p>Focus: Biomathematics, Engineering Sciences</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2 data-aos="fade-down">Relevant Coursework <i class="fas fa-book"></i></h2>
+        <div class="courses-item" data-aos="fade-up" data-aos-duration="1000">
+            <ul>
+                <li>Biomedical Device Design</li>
+                <li>Medical Device Regulation</li>
+                <li>Biomaterials</li>
+                <li>Bioelectronics</li>
+                <li>Engineering Design</li>
+                <li>Introduction to Machine Learning</li>
+                <li>Statistics</li>
+                <li>Solid Mechanics</li>
+                <li>Digital Electronics</li>
+                <li>Molecular Biology</li>
+                <li>Cell Structure and Function</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- JB Logo -->
+    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+    <!-- Navigation Links (Back, Home, Next) -->
+    <div class="home-link" data-aos="fade-up">
+        <a href="projects.html" class="button">Back</a> <!-- Back to projects.html -->
+        <a href="index.html" class="button">Home</a> <!-- Home button -->
+        <a href="contact.html" class="button">Next</a> <!-- Next to contact.html -->
+    </div>
+
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
