@@ -51,7 +51,7 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 30px 30px 60px;
+            padding: 30px 30px 80px; /* Adjust padding-bottom to avoid cutting off on smaller screens */
             background-color: rgba(255, 255, 255, 0.9); /* White background */
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -59,7 +59,6 @@
             width: 100%; /* Ensure the content takes up full width */
             max-width: 1200px; /* Limit max width */
             min-height: 100vh; /* Ensure the content has a minimum height that fills the viewport */
-            padding-bottom: 80px; /* Add padding to prevent cut-off on smaller screens */
         }
 
         .about-content:hover {
@@ -210,12 +209,12 @@
         @media (max-width: 480px) {
             .about-me {
                 background-size: 110%;
-                min-height: 120vh; /* Ensure full content display on mobile */
+                min-height: 130vh; /* Ensure full content display on mobile */
             }
 
             .about-content {
                 padding: 10px;
-                min-height: 120vh; /* Extend the height for mobile to avoid cutting off buttons */
+                min-height: 130vh; /* Extend the height for mobile to avoid cutting off buttons */
             }
 
             h1 {
