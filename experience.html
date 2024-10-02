@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience & Certificates</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4FACFE, #003366);
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            margin: 40px;
+            padding-bottom: 100px;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .experience, .certificates {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .certificates-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .certificates-item {
+            width: 45%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .certificates-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .experience-item {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover, .certificates-item:hover {
+            transform: translateY(-10px);
+        }
+
+        a, button {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        .logo {
+            width: 112.5px;
+            margin: 40px auto 10px auto;
+            display: block;
+            background-color: transparent;
+        }
+
+        .home-link {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .home-link .button {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #FFD700;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .home-link .button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .certificates-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .experience-item, .certificates-item {
+                max-width: 600px;
+                padding: 20px;
+            }
+
+            .home-link .button {
+                font-size: 1.3rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+                padding-bottom: 60px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .experience-item, .certificates-item {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 10px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .certificates-item {
+                width: 95%; /* Increased width to take more space on smaller screens */
+                max-width: 100%; /* Ensure it doesn't go beyond screen */
+                padding: 15px; /* Slightly reduced padding to fit */
+            }
+
+            .experience-item, .certificates-item {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .home-link .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 data-aos="fade-down">Experience <i class="fas fa-briefcase"></i></h2>
+
+        <div class="experience-item" data-aos="fade-up" data-aos-duration="1000">
+            <h3>Baker Lab, Dartmouth College</h3>
+            <p><strong>Graduate Engineering Researcher, Cryogenic Alloy Wear Testing</strong></p>
+            <ul>
+                <li>Analyzed the wear properties of new alloys at room and cryogenic temperatures.</li>
+                <li>Achieved 22% and 17% improvement over stainless steel for space and medical applications.</li>
+                <li>Optimized pin-holder design, improving performance by 6% using statistical analysis software.</li>
+                <li>Adapted wear tester for extremely low temperatures, eliminating external factors.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item" data-aos="fade-up" data-aos-duration="1400">
+            <h3>Analog Lab, Dartmouth College</h3>
+            <p><strong> Student Researcher, Asthma Symptom Monitoring</strong></p>
+            <ul>
+                <li>Developed a wearable device that detects and tracks cough, wheezing, lung function, and inhaler use.</li>
+                <li>Collected, analyzed, and interpreted data, achieving 99.2% accuracy for asthma control monitoring.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2 data-aos="fade-down">Certificates <i class="fas fa-certificate"></i></h2>
+
+        <div class="certificates-wrapper">
+            <div class="certificates-item" data-aos="fade-up" data-aos-duration="1000">
+                <h3>MCA Summer 2020 Certificate of Completion</h3>
+                <p>Issued by: NASA L'SPACE</p>
+                <img src="WhatsApp Image 2024-10-02 at 6.13.42 PM.jpeg" alt="MCA Summer 2020 Certificate">
+            </div>
+
+            <div class="certificates-item" data-aos="fade-up" data-aos-duration="1400">
+                <h3>NPWEE Fall 2020 Certificate of Participation</h3>
+                <p>Issued by: NASA L'SPACE</p>
+                <img src="WhatsApp Image 2024-10-02 at 6.13.41 PM.jpeg" alt="NPWEE Fall 2020 Certificate">
+            </div>
+        </div>
+    </section>
+
+    <!-- JB Logo -->
+    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+    <!-- Navigation Links (Back, Home, Next) -->
+    <div class="home-link" data-aos="fade-up">
+        <a href="projects.html" class="button">Back</a> <!-- Back to projects.html -->
+        <a href="index.html" class="button">Home</a> <!-- Home button -->
+        <a href="contact.html" class="button">Next</a> <!-- Next to contact.html -->
+    </div>
+
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
