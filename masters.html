@@ -35,12 +35,14 @@
             align-items: center;
             justify-content: center;
             gap: 10px; /* Adds space between the title and the icon */
+            flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
         }
 
         .icon-links {
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
 
         .document-link {
@@ -91,7 +93,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            flex-wrap: nowrap;
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
         }
 
         /* Center images */
@@ -259,7 +261,9 @@
 <body>
 
     <section id="research" class="research">
-        <h2 data-aos="fade-down">Master's Research <i class="fas fa-microscope"></i></h2>
+        <h2 data-aos="fade-down">
+            Master's Research <i class="fas fa-microscope"></i>
+        </h2>
         <p data-aos="fade-up" class="title-container" style="font-size: 1.5rem; color: #FFD700;">
             Smart Toys for Sensing and Soothing Distress in Pediatric Patients
             <span class="icon-links">
@@ -319,4 +323,5 @@
 
 </body>
 </html>
+
 
