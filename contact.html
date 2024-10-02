@@ -13,6 +13,7 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         h2 {
@@ -29,11 +30,13 @@
 
         form {
             margin: 0 auto;
-            width: 300px;
+            width: 100%;
+            max-width: 300px; /* Limit form width for small screens */
         }
 
         input, textarea {
             width: 100%;
+            max-width: 100%; /* Make sure inputs stay within the container */
             padding: 10px;
             margin: 10px 0;
             border: none;
@@ -74,7 +77,9 @@
         }
 
         .resume {
-            margin-bottom: 20px;
+            position: absolute; /* Position it in the top right corner */
+            top: 20px;
+            right: 20px;
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
@@ -154,6 +159,7 @@
 
             form {
                 width: 100%;
+                max-width: 90%; /* Limit form width on medium screens */
             }
 
             .social-icons {
@@ -166,7 +172,6 @@
 
             .resume {
                 font-size: 1.2rem;
-                margin-bottom: 30px;
             }
 
             .back-home .button {
@@ -187,6 +192,7 @@
 
             form {
                 width: 100%;
+                max-width: 90%; /* Limit form width on small screens */
             }
 
             input, textarea {
@@ -203,7 +209,7 @@
 
             .resume {
                 font-size: 1rem;
-                margin-bottom: 20px;
+                right: 10px; /* Adjust the resume link placement */
             }
 
             .back-home .button {
@@ -214,10 +220,6 @@
             .logo {
                 width: 75px;
                 bottom: 50px;
-            }
-
-            .resume {
-                margin-bottom: 30px;
             }
         }
     </style>
@@ -252,6 +254,5 @@
 
 </body>
 </html>
-
 
 
