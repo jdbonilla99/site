@@ -51,13 +51,13 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 35px;
+            width: 18px; /* Reduced width */
+            height: 18px; /* Reduced height */
             background-color: transparent;
-            border: 2px solid #FFD700;
-            border-radius: 5px;
+            border: 1.5px solid #FFD700; /* Smaller border */
+            border-radius: 3px; /* Smaller rounded corners */
             color: #FFD700;
-            font-size: 1.5rem;
+            font-size: 0.9rem; /* Smaller icon size */
             text-decoration: none;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
@@ -244,6 +244,12 @@
 
             .logo {
                 width: 75px;
+            }
+
+            .document-link {
+                font-size: 0.8rem; /* Slightly smaller icons on mobile */
+                width: 15px; /* Adjust size for mobile screens */
+                height: 15px;
             }
         }
     </style>
