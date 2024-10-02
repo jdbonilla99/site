@@ -69,17 +69,14 @@
             font-size: 1.2rem;
             color: #FFFFFF;
             margin: 15px 0;
+            padding-left: 5%; /* Apply padding for uniform left and right margins */
+            padding-right: 5%;
             word-wrap: break-word; /* Ensure words wrap on smaller screens */
         }
 
-        /* Consistent Padding for Text */
-        .content-container {
+        ul {
             padding-left: 5%;
             padding-right: 5%;
-        }
-
-        ul {
-            padding-left: 20px;
         }
 
         li {
@@ -107,11 +104,11 @@
         /* Center images */
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two images per row */
+            grid-template-columns: 1fr 1fr; /* Two images per row */
             justify-content: center; /* Center the grid */
             gap: 20px;
             margin: 20px 5%; /* Uniform margin for both sides */
-            max-width: 100%;
+            max-width: 90%; /* Prevent the images from going too wide */
             text-align: center;
         }
 
@@ -267,7 +264,7 @@
 </head>
 <body>
 
-    <section id="research" class="research content-container">
+    <section id="research" class="research">
         <h2 data-aos="fade-down">
             Master's Research <i class="fas fa-microscope"></i>
         </h2>
