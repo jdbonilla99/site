@@ -6,6 +6,8 @@
     <title>About Me</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Library for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- AOS Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -15,24 +17,18 @@
             margin: 0;
             padding: 0;
             color: #000;
-            min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .about-me {
-            background-image: url('Jonathan.jpeg'); /* Path to the image */
+            background-image: url('Jonathan.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
             position: relative;
-            min-height: 150vh; /* Set to 150vh to cover full viewport height */
-            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .about-me::before {
@@ -41,25 +37,20 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%; /* Ensures the overlay covers the entire height of .about-me */
-            background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
             z-index: 1;
-            pointer-events: none; /* Ensure the overlay doesn't interfere with clicking elements */
         }
 
         .about-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 30px 30px 120px; /* Adjust padding-bottom to avoid cutting off on smaller screens */
-            background-color: rgba(255, 255, 255, 0.9); /* White background */
+            padding: 30px 30px 60px;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            width: 100%; /* Ensure the content takes up full width */
-            max-width: 1200px; /* Limit max width */
-            min-height: 100vh; /* Ensure the content has a minimum height that fills the viewport */
-            text-align: left; /* Justify text to the left */
         }
 
         .about-content:hover {
@@ -72,13 +63,79 @@
             color: #003366;
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
-            display: inline-block; /* Underline the text */
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            color: #003366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 i {
+            margin-left: 5px;
         }
 
         p {
             font-size: 1.2rem;
             color: black;
             margin-bottom: 40px;
+        }
+
+        .education {
+            margin-top: 50px;
+        }
+
+        .education-item {
+            background-color: #4FACFE;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin: 20px auto;
+            width: fit-content;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .education-item:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .bachelor-degrees {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .bachelor-degrees .education-item {
+            flex-grow: 1;
+            max-width: 35%;
+        }
+
+        .education-item h3 {
+            font-weight: bold;
+            color: black;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item p.degree-institution {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item p.degree-focus {
+            color: white;
+            font-size: 1.2rem;
         }
 
         .lists {
@@ -89,24 +146,26 @@
             margin-bottom: 30px;
         }
 
+        /* Use flexbox for lists */
         ul {
             list-style-type: none;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         ul li {
-            background-color: #4FACFE; /* Muted blue-gray background */
-            margin: 10px;
+            background-color: #4FACFE;
+            margin: 5px;
             padding: 10px;
             border-radius: 5px;
-            width: 30%; /* Set percentage width */
+            flex: 1 1 22%; /* Four items per row on larger screens */
+            box-sizing: border-box;
             text-align: center;
             transition: transform 0.3s ease;
             color: #FFFFFF;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         ul li:hover {
@@ -116,7 +175,7 @@
         .home-link {
             margin-top: 40px;
             text-align: center;
-            padding-bottom: 100px; /* Extend padding-bottom for mobile screens */
+            padding-bottom: 50px;
         }
 
         .home-link .button {
@@ -126,7 +185,7 @@
             background-color: #003366;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
+            margin: 0 10px;
             transition: all 0.3s ease;
         }
 
@@ -152,96 +211,121 @@
 
         /* Responsive Styles */
         @media (max-width: 1024px) {
-            .about-content {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-
             ul li {
-                width: 45%; /* Adjust width for medium screens */
-                font-size: 1.2rem;
-            }
-
-            .home-link .button {
-                font-size: 1.3rem;
-                padding: 8px 15px;
+                flex: 1 1 30%; /* Three items per row on smaller laptops */
             }
         }
 
         @media (max-width: 768px) {
-            .about-me {
-                background-size: 120%; /* Zoom out the background */
-            }
-
-            .about-content {
-                padding: 15px;
-            }
-
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                margin-bottom: 20px;
             }
 
-            p {
-                font-size: 1rem;
+            h2 {
+                font-size: 1.8rem;
             }
 
-            ul li {
-                width: 100%; /* Full width for small screens */
+            p, li {
                 font-size: 1.1rem;
             }
 
-            .home-link .button {
-                font-size: 1.2rem;
-                padding: 7px 10px;
+            ul li {
+                flex: 1 1 45%; /* Two items per row */
             }
 
-            .logo {
-                width: 90px; /* Smaller logo on small screens */
+            .bachelor-degrees {
+                flex-wrap: wrap;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 80%;
+            }
+
+            .education-item:first-of-type {
+                max-width: 80%;
+            }
+
+            .education-item h3 {
+                font-size: 1.3rem;
             }
         }
 
         @media (max-width: 480px) {
-            .about-me {
-                background-size: 110%;
-                min-height: 150vh; /* Ensure full content display on mobile */
-            }
-
-            .about-content {
-                padding: 10px;
-                min-height: 150vh; /* Extend the height for mobile to avoid cutting off buttons */
-            }
-
             h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+                margin-bottom: 15px;
             }
 
-            p {
-                font-size: 0.9rem;
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p, li {
+                font-size: 1rem;
             }
 
             ul li {
-                width: 100%; /* Full width for mobile */
-                font-size: 1rem;
+                flex: 1 1 45%; /* Two items per row on smaller screens */
+                font-size: 0.9rem;
             }
 
-            .home-link {
-                padding-bottom: 120px; /* Extend padding to avoid button cutoff */
+            .bachelor-degrees {
+                flex-direction: column;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 100%;
+            }
+
+            .education-item:first-of-type {
+                max-width: 100%;
+            }
+
+            .education-item h3 {
+                font-size: 1rem; /* Reduced font size for degree title */
+                margin-bottom: 5px;
+            }
+
+            .education-item p.degree-institution {
+                font-size: 0.9rem; /* Reduced font size for institution */
+            }
+
+            .education-item p.degree-focus {
+                font-size: 0.9rem; /* Reduced font size for focus */
+            }
+
+            .education-item h3::after {
+                content: ' ';
+                display: block;
+                margin-top: 5px;
             }
 
             .home-link .button {
-                font-size: 1rem;
-                padding: 5px 10px;
+                font-size: 1.2rem;
+                padding: 7px 14px;
             }
 
             .logo {
-                width: 75px; /* Smaller logo */
+                width: 90px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            p, li {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .home-link .button {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 75px;
             }
         }
     </style>
@@ -251,59 +335,107 @@
     <section class="about-me">
         <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
             <h1>About Jonathan Bonilla</h1>
-            <p>Researcher with an MS in Engineering Sciences (Medical Devices) at Thayer School of Engineering. Former King Scholar at Dartmouth College with a Bachelor of Arts (BA) in Biomathematics and Engineering and a Bachelor of Engineering (BE) in Biomaterials and Bioelectronics. I am a dedicated engineer with expertise in medical devices.</p>
-            
-            <p>I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
-            
-            <!-- Technical Skills Section -->
+            <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
+
+            <!-- Education Section -->
+            <section class="education">
+                <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
+
+                <!-- Master's Degree (alone at the top) -->
+                <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
+                    <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
+                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
+                </div>
+
+                <!-- Flexbox for Bachelor's Degrees -->
+                <div class="bachelor-degrees">
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+                        <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                        <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
+                    </div>
+
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+                        <h3>Bachelor of Arts <br>(2017 - 2021)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
+                        <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coursework Section -->
             <div class="lists">
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
-                    <h2>Technical Skills</h2>
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Coursework <i class="fas fa-book-open"></i></h2>
                     <ul>
-                        <li>Medical Devices</li>
-                        <li>Biomedical Engineering</li>
-                        <li>Robotics</li>
-                        <li>SolidWorks</li>
+                        <li>Biomedical Device Design</li>
+                        <li>Medical Device Regulation</li>
+                        <li>Biomaterials</li>
+                        <li>Bioelectronics</li>
+                        <li>Molecular Biology</li>
+                        <li>Machine Learning</li>
+                        <li>Solid Mechanics</li>
+                        <li>Digital Electronics</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
+                    <h2>Technical Skills <i class="fas fa-tools"></i></h2>
+                    <ul>
                         <li>3D Printing</li>
                         <li>Technical Writing</li>
                         <li>Data Analysis</li>
                         <li>Regulatory Compliance</li>
                     </ul>
                 </div>
-                
-                <!-- Soft Skills Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
-                    <h2>Soft Skills</h2>
-                    <ul>
-                        <li>Leadership</li>
-                        <li>Teamwork</li>
-                        <li>Problem Solving</li>
-                        <li>Communication</li>
-                        <li>Adaptability</li>
-                    </ul>
-                </div>
 
-                <!-- Languages Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
-                    <h2>Languages</h2>
+                <!-- Programming Languages Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2800">
+                    <h2>Software & Programming Languages <i class="fas fa-laptop-code"></i></h2>
                     <ul>
-                        <li>English</li>
-                        <li>Spanish (Native)</li>
-                        <li>Italian (Proficiency)</li>
-                        <li>French (Intermediate)</li>
-                        <li>Mandarin (Basic)</li>
-                        <li>Portuguese (Basic)</li>
+                        <li>MATLAB</li>
+                        <li>C</li>
+                        <li>SolidWorks</li>
+                        <li>Arduino</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                        <li>MiniTab</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Soft Skills Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                <h2>Soft Skills <i class="fas fa-users"></i></h2>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                <h2>Languages <i class="fas fa-language"></i> </h2>
+                <ul>
+                    <li>Spanish (Native)</li>
+                    <li>Italian (Proficiency)</li>
+                    <li>French (Intermediate)</li>
+                    <li>Mandarin (Basic)</li>
+                </ul>
+            </div>
+
             <!-- JB Logo -->
-            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up" data-aos-duration="2200">
+            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
 
             <!-- Home and Next Links -->
             <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
                 <a href="index.html" class="button">Home</a>
-                <a href="masters.html" class="button">Next</a> <!-- Linked to masters.html -->
+                <a href="masters.html" class="button">Next</a>
             </div>
         </div>
     </section>
@@ -315,5 +447,3 @@
 
 </body>
 </html>
-
-
