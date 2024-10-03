@@ -3,187 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Bonilla - Cover</title>
+    <title>About Me</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Library for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
-        /* Reset margins and paddings */
-        html, body {
+        body {
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-image: url('newbg.jpeg');
+            color: #000;
+        }
+
+        .about-me {
+            background-image: url('Jonathan.jpeg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
-            overflow: hidden;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .about-me::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 30px 30px 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-content:hover {
+            transform: translateY(-10px);
         }
 
         h1 {
-            font-size: 6vw; /* Increased size for title */
-            color: #FFFFFF;
-            margin-top: 15vh; /* Adjusted margin to prevent overlap with logo */
-            z-index: 1;
-            position: relative;
-            animation: slideInFromTop 1.5s ease-out forwards;
-            opacity: 0;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 30px;
         }
 
-        nav {
-            margin-top: 8vh; /* Reduced margin between title and nav */
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 0.5s;
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            color: #003366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #FFFFFF;
+        h2 i {
+            margin-left: 5px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .education {
+            margin-top: 50px;
+        }
+
+        .education-item {
+            background-color: #4FACFE;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin: 20px auto;
+            width: fit-content;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .education-item:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .bachelor-degrees {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .bachelor-degrees .education-item {
+            flex-grow: 1;
+            max-width: 35%;
+        }
+
+        .education-item h3 {
+            font-weight: bold;
+            color: black;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item p.degree-institution {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item p.degree-focus {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .lists {
+            margin-top: 50px;
+        }
+
+        .list-container {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul li {
+            background-color: #4FACFE;
             margin: 10px;
-            font-size: 1.5vw;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 0.5s;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            width: 22%;
+            text-align: center;
+            transition: transform 0.3s ease;
+            color: #FFFFFF;
+            font-size: 1.3rem;
+        }
+
+        ul li:hover {
+            transform: translateY(-5px);
+        }
+
+        .home-link {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .home-link .button {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #FFD700;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .home-link .button:hover {
+            background-color: #FFD700;
+            color: #003366;
         }
 
         .logo {
-            position: absolute;
-            bottom: 10vh; /* Raised logo for better positioning */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 18vw; /* Increased logo size for better visibility */
-            opacity: 0;
-            animation: emergeFromBottom 2s ease-out forwards;
-            z-index: 1;
+            width: 112.5px;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: transparent;
+            transition: transform 0.3s ease;
         }
 
-        /* Slide in heading text from the top */
-        @keyframes slideInFromTop {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .logo:hover {
+            transform: translateY(-5px);
         }
 
-        /* Fade in the navigation links */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Animate the logo to emerge from the bottom */
-        @keyframes emergeFromBottom {
-            0% {
-                bottom: 0;
-                opacity: 0;
-            }
-            100% {
-                bottom: 10vh;
-                opacity: 0.9;
-            }
-        }
-
-        /* Responsive adjustments for tablets and smaller screens */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 7vw; /* Larger title size for tablets */
-                margin-top: 12vh;
-            }
-
-            nav a {
-                font-size: 2vw;
-                margin: 8px;
-            }
-
-            .logo {
-                width: 20vw;
-                bottom: 8vh; /* Slightly raised logo */
-            }
-        }
-
+        /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 9vw;
-                margin-top: 15vh;
+                font-size: 2.5rem;
+                margin-bottom: 20px;
             }
 
-            nav a {
-                font-size: 2.5vw;
+            h2 {
+                font-size: 1.8rem;
             }
 
-            .logo {
-                width: 22vw;
-                bottom: 8vh;
+            p, li {
+                font-size: 1.1rem;
+            }
+
+            ul li {
+                width: 45%; /* Display two items per row */
+            }
+
+            .bachelor-degrees {
+                flex-wrap: wrap;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 80%;
+            }
+
+            .education-item:first-of-type {
+                max-width: 80%;
+            }
+
+            .education-item h3 {
+                font-size: 1.3rem;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 20px;
-            }
-
             h1 {
-                font-size: 10vw; /* Larger size for phones */
-                margin-top: 10vh; /* Adjusted margin to raise title */
+                font-size: 2rem;
+                margin-bottom: 15px;
             }
 
-            nav a {
-                font-size: 5vw;
-                margin: 8px;
-                display: block; /* Stack links on smaller screens */
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+
+            ul li {
+                width: 45%; /* Display two items per row */
+                font-size: 0.9rem; /* Smaller font size to fit more items */
+            }
+
+            .bachelor-degrees {
+                flex-direction: column;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 100%;
+            }
+
+            .education-item:first-of-type {
+                max-width: 100%;
+            }
+
+            .education-item h3 {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+            }
+
+            /* Ensure the dates are on a separate line */
+            .education-item h3::after {
+                content: ' ';
+                display: block;
+                margin-top: 5px;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 14px;
             }
 
             .logo {
-                width: 28vw; /* Larger logo for phones */
-                bottom: 12vh; /* Raised logo for better placement */
+                width: 90px;
             }
         }
 
-        /* For high zoom/resolution cases */
-        @media (min-width: 2560px) and (max-height: 1440px) {
-            h1 {
-                font-size: 4vw;
-                margin-top: 14vh;
+        @media (max-width: 320px) {
+            p, li {
+                font-size: 0.9rem;
             }
 
-            nav a {
-                font-size: 1.5vw;
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .home-link .button {
+                font-size: 0.9rem;
             }
 
             .logo {
-                width: 16vw;
-                bottom: 10vh;
+                width: 75px;
             }
         }
-
     </style>
 </head>
 <body>
 
-    <h1>Jonathan Bonilla's Portfolio</h1>
+    <section class="about-me">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
+            <h1>About Jonathan Bonilla</h1>
+            <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
 
-    <nav>
-        <a href="aboutme.html">About Me</a>
-        <a href="masters.html">Master's Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+            <!-- Education Section -->
+            <section class="education">
+                <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
-    <img src="JBlogo_uniform_shadow.png" alt="JB Logo" class="logo">
+                <!-- Master's Degree (alone at the top) -->
+                <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
+                    <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
+                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
+                </div>
+
+                <!-- Flexbox for Bachelor's Degrees -->
+                <div class="bachelor-degrees">
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+                        <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                        <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
+                    </div>
+
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+                        <h3>Bachelor of Arts <br>(2017 - 2021)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
+                        <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coursework Section -->
+            <div class="lists">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Coursework <i class="fas fa-book-open"></i></h2>
+                    <ul>
+                        <li>Biomedical Device Design</li>
+                        <li>Medical Device Regulation</li>
+                        <li>Biomaterials</li>
+                        <li>Bioelectronics</li>
+                        <li>Molecular Biology</li>
+                        <li>Machine Learning</li>
+                        <li>Solid Mechanics</li>
+                        <li>Digital Electronics</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
+                    <h2>Technical Skills <i class="fas fa-tools"></i></h2>
+                    <ul>
+                        <li>3D Printing</li>
+                        <li>Technical Writing</li>
+                        <li>Data Analysis</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+
+                <!-- Programming Languages Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2800">
+                    <h2>Software & Programming Languages <i class="fas fa-laptop-code"></i></h2>
+                    <ul>
+                        <li>MATLAB</li>
+                        <li>C</li>
+                        <li>SolidWorks</li>
+                        <li>Arduino</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                        <li>MiniTab</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Soft Skills Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                <h2>Soft Skills <i class="fas fa-users"></i></h2>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                <h2>Languages <i class="fas fa-language"></i> </h2>
+                <ul>
+                    <li>Spanish (Native)</li>
+                    <li>Italian (Proficiency)</li>
+                    <li>French (Intermediate)</li>
+                    <li>Mandarin (Basic)</li>
+                </ul>
+            </div>
+
+            <!-- JB Logo -->
+            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+            <!-- Home and Next Links -->
+            <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
+                <a href="index.html" class="button">Home</a>
+                <a href="masters.html" class="button">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 </html>
